@@ -20,8 +20,9 @@ const showWeather = (data) => {
         return;
     }
     weather.innerHTML = `
-        <div>
-            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+        <div class="Img">
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" 
+            alt="">
         </div>
         <div>
             <h2>${data.main.temp} ℃</h2>
@@ -36,5 +37,6 @@ form.addEventListener(
     function(event) {
         getWeather(search.value)
         event.preventDefault();
+        search.value=""
     }
 )
